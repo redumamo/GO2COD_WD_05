@@ -1,0 +1,367 @@
+
+*{
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+width:150px;
+height: 90px;
+margin-right: auto;
+align-items: auto;
+}
+
+.navbar{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+ background-color: rgba(0, 0, 0, 0.5);
+   position: sticky;
+   top: 0;
+
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+
+    text-decoration: none;
+    color: rgb(248, 241, 232);
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: rgb(251, 245, 210);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px goldenrod;
+}
+.navbar .hamburger{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: black;
+    border-radius: 3px;
+    display: none;
+}
+@media(max-width: 800px){
+  .navbar .hamburger{
+    display: block;
+  } 
+  .navbar ul{
+position: fixed;
+top: 90px;
+right: -100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+text-align: center;
+background: rgba(0,0,0,0.5);
+padding: 20px;
+transition: 0.5s ease-in-out;
+}
+.navbar.active ul{
+    right: 0;
+}
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 245, 169);
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+   background: url("Gold\ Luxury\ Initial\ Circle\ Logo\ \(8\).png") no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    
+}
+.headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin:10px 0px;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 0px solid rgb(252, 252, 252);
+    outline: none;
+    transition: .8s ease;
+}
+.btn:hover{
+    cursor: pointer;
+  
+    color: black;
+    box-shadow: 0 0 1px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+}
+.btn.btn-primary {
+    background: #ffbd39;
+    border: 1px solid #ffbd39 !important;
+    color: #080808 !important;
+}
+/* about*/
+#about{
+     margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color:rgb(209, 206, 206);
+   
+}
+
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 600px;
+    height: 550px;
+
+}
+
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 20px;
+    color:rgb(237, 168, 6);
+}
+#about h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+color:rgb(130, 61, 61);
+
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+color:rgb(180, 14, 75);
+
+}
+#intro p
+{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+color:rgb(0, 0, 0);
+}
+/*services*/
+.container{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.container h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .services{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container .services .card{
+    width: 330px;
+    text-align: center;
+    background: #222;
+    padding: 90px 50px;
+    margin-bottom: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .services .card:hover{
+    background: rgba(167, 120, 78, 0.994);
+}
+
+.container .services .card .content{
+    transition: 0.3s;
+}
+
+.container .services .card:hover .content{
+    transform: scale(1.07);
+}
+
+.container .services .card .content .icon{
+    padding: 5px 0;
+    color: white;
+}
+
+.container .services .card .content .icon i{
+    font-size: 40px;
+}
+
+.container .services .card:hover .content .title{
+    color: white;
+}
+
+.container .services .card .content .title{
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: goldenrod;
+    transition: 0.3s;
+}
+
+/* Project*/
+#Project{
+     margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(179, 182, 184);
+    color: rgb(109, 176, 32);
+    align-items: center;
+    padding: 20px;
+} 
+.gallery{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ box-sizing: border-box;
+}
+.gallery img{
+    width: 360px;
+    height: 450px;
+    margin: 10px;
+}
+.gallery img:hover{
+    transform:scale(1.1);
+cursor:pointer;
+}
+  
+/* contact*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color:rgb(214, 214, 214);
+    color: rgb(211, 154, 10);
+    padding: 20px;
+     margin-top: 0px;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border:none;
+    outline: none;
+}
+#msg{
+    width: 20%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(253, 253, 253);
+    background-color: rgb(0, 74, 97);
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* Set a specific color for each brand */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+p{
+    margin:20px;
+    color:#ffffff;
+}
+footer{
+     margin-top: 0px;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  background-color:rgb(0, 0, 0);
+  text-align: center;
+ 
+}
